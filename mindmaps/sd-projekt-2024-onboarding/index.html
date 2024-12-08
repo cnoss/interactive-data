@@ -1,0 +1,47 @@
+<!doctype html> 
+  <html lang="de">
+    <head>
+      <title>Screendesign Projekt 2024 :: Map</title>
+      
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Christian Noss">
+  
+      <link href="/assets/_compiled/styles/combined-styles.css" rel="stylesheet">
+
+      <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+      <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+      <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+    </head>
+    <body class="mindmap">
+        
+
+    
+    <style>
+      #mindmap {
+      --markmap-text-color: #fff;
+      --markmap-font: 300 15px/20px var(--font-family-sans);
+      }
+    </style>
+  
+    
+
+
+    <main>
+      <h1 class="title">Screendesign Projekt 2024</h1>
+      <h2 class="subtitle">Onboarding</h2>
+      <svg id="mindmap" style="width: 800px; height: 800px"></svg>
+      
+    <script>
+      const { Markmap, loadCSS, loadJS } = markmap;
+      const options = undefined;
+      const svgEl = document.querySelector('#mindmap');
+      Markmap.create(svgEl, options, {"content":"Onboarding // MD","children":[{"content":"Teamarbeit","children":[{"content":"<em>Frage: Wie können wir die Teamarbeit so gestalten, dass alle ihre Stärken einbringen können?</em>","children":[]},{"content":"Stärken herausfinden und vernünftig einteilen","children":[]}]},{"content":"Kreativer Spielraum","children":[]},{"content":"Zielgruppen &amp; Bedürfnisse","children":[]},{"content":"Projektziele","children":[]},{"content":"Fragen zum Briefing","children":[]},{"content":"Kompetenzen","children":[{"content":"Frage 1","children":[]}]},{"content":"Take Aways","children":[]}]}).fit();
+    </script>
+  
+
+    </main>
+
+  
+    </body>
+  </html>
