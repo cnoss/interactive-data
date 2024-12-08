@@ -1,4 +1,4 @@
-# Data Views
+# Interactive Data
 
 ## Mindmapper 11ty
 
