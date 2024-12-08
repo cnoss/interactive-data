@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": "title",
+      "title": "Happiness lies in the moments we create",
+      "subtitle": "Our service makes your experience better",
+      "video": "https://bci.klickmeister.de/media/Reykjanes_1-1_web.mp4",
+      "layout": "title",
+      "text": "Logo komplett – auf hellem Grund",
+      "cssClasses": "has-grid",
+      "cta": {
+        "text": "Get in touch",
+        "link": "/contact"
+      }
+    },
+    {
+      "id": "navigation",
+      "layout": "navigation",
+      "links": [
+        {
+          "text": "tours",
+          "link": "/tours"
+        },
+        {
+          "text": "inspiration",
+          "link": "/inspiration"
+        },
+        {
+          "text": "contact",
+          "link": "/contact"
+        }
+      ],
+      "cssClasses": ""
+    },
+    {
+      "id": "mission-statement",
+      "text": "Basecamp Iceland is dedicated to providing luxury tours that are as unique as the travelers we serve. Our mission is to craft personalized itineraries that capture the essence of Iceland’s natural beauty and cultural heritage, offering an experience that is both luxurious and authentic. From the moment you arrive to the moment you depart, we ensure that every detail of your journey is carefully planned and executed to perfection.",
+      "layout": "large-text",
+      "cssClasses": ""
+    },
+    {
+      "id": "wonders",
+      "title": "Iceland’s Liquid Heart",
+      "text": "Iceland is a land of contrasts, where fire and ice coexist in perfect harmony. Our tours are designed to showcase the country’s most iconic natural wonders, from the powerful geysers and majestic waterfalls of the Golden Circle to the otherworldly landscapes of the South Coast. Whether you’re seeking adventure or relaxation, our itineraries are tailored to suit your interests and preferences, ensuring an unforgettable experience that will stay with you long after you return home.",
+      "layout": "image-with-text",
+      "image": "./images/more-images/seljalandsfoss-gf1d0243-pano.jpg.webp",
+      "cssClasses": ""
+    },
+    {
+      "id": "endless-summer-days",
+      "title": "Endless Summer Days",
+      "text": "During Iceland’s summer, the sun barely sets, bathing the land in a soft, golden light that lasts throughout the night. This unique phenomenon creates an enchanting atmosphere, where time seems to stand still, and the beauty of the landscape is illuminated in a magical way.",
+      "layout": "image-with-text",
+      "image": "./images/more-images/horsesinthesun-1.png.webp",
+      "cssClasses": ""
+    },
+    {
+      "id": "natures-playground",
+      "title": "Nature’s Playground",
+      "text": "Iceland is a playground for nature lovers, with endless opportunities for adventure. From hiking to remote waterfalls to exploring ice caves and volcanic craters, the island offers a diverse range of experiences that highlight its incredible natural beauty.",
+      "layout": "image-with-text",
+      "image": "./images/more-images/dji0980.jpg.webp",
+      "cssClasses": ""
+    },
+    {
+      "id": "contact",
+      "title": "Contact Us",
+      "text": "Whether you're dreaming of your next adventure in Iceland or have a question about our tours, we're here to help. Share your thoughts, ask us anything, or simply say hello. Fill out the form below, and we’ll get back to you as soon as possible. We can’t wait to start planning your unforgettable journey!",
+      "layout": "contact",
+      "cssClasses": ""
+    },
+    {
+      "id": "accommodation",
+      "title": "Luxury Accommodation",
+      "layout": "image",
+      "image": "./images/accomodation-large.webp",
+      "cssClasses": ""
+    }
+  ]
+}
