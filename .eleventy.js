@@ -6,7 +6,7 @@ const Markmap = require('markmap-lib').Markmap;
 
 const config = {
   "dist": "./docs",
-  "pathPrefix": "/markmap",
+  "pathPrefix": "mindmaps",
 };
 
 
