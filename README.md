@@ -1,14 +1,5 @@
-# 11ty-mindmap
+# Data Views
 
-> Markdown flavored mindmaps and Eleventy.
+## Mindmapper 11ty
 
-Playing with some Markdown->Mindmap conversions via [**markmap-lib**](https://markmap.js.org/).
-Mindmaps are stored in ./src/mindmaps/ as Nunjucks templates and wrapped in a `{% mindmap %}` paired shortcode (which enables you to add more content before and after the mindmap or include multiple mindmaps on a single page).
-
-## USAGE
-
-This is an Eleventy site, so [after cloning this repo locally] you can run <kbd>npm run build</kbd> to build the site, or <kbd>npm run serve</kbd> to build and serve the site.
-
-```sh
-npm run serve
-```
+Basierend auf [11ty-mindmap](https://github.com/pdehaan/11ty-mindmap) können hiermit kuschelige Mindmaps via 11ty erstellt werden.
