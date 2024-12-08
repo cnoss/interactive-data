@@ -4,12 +4,10 @@ const del = require("del");
 const config = {
   "dist": "./docs",
   "pathPrefix": {
-    "prod": "mindmapper",
+    "prod": "interactive-data",
     "development": ""
   },
 };
-
-
 
 
 module.exports = async function (eleventyConfig) {
