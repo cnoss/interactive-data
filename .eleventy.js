@@ -1,8 +1,5 @@
 const del = require("del");
-// import { Transformer } from 'markmap-lib';
 
-const Transformer = require('markmap-lib').Transformer;
-const Markmap = require('markmap-lib').Markmap;
 
 const config = {
   "dist": "./docs",
@@ -11,9 +8,13 @@ const config = {
 
 
 
-module.exports = (eleventyConfig) => {
-    /* Compilation
-    ########################################################################## */
+
+module.exports = async function (eleventyConfig) {
+	const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  
+  /* Compilation
+  ########################################################################## */
 
   // Watch our js for changes
   eleventyConfig.addWatchTarget('./src/assets/scripts/main.js');
@@ -37,25 +38,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ 'src/assets/scripts': 'assets/scripts' });
   eleventyConfig.addWatchTarget("./src/assets/scripts");
 
-  eleventyConfig.addPairedShortcode("mmmindmap", (input, id = "mindmap") => {
-    const transformer = new Transformer();
-    const { root, features } = transformer.transform(input);
-
-    return {
-      id,
-      root,
-      features,
-    };
-
-    
-    return `
-      <svg id="${id}" style="width: 800px; height: 800px"></svg>
-      <script>
-      svgEl = document.querySelector('#${id}');
-      Markmap.create(svgEl, options, ${JSON.stringify(root)}).fit();
-      </script>
-    `.trim();
-  });
 
   const pathPrefix = config.pathPrefix[process.env.ELEVENTY_ENV];
 
@@ -71,7 +53,6 @@ module.exports = (eleventyConfig) => {
     templateFormats: [
       'md',
       'njk',
-      'html',
       '11ty.js'
     ],
   };

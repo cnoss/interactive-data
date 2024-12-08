@@ -9,12 +9,12 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "del": "^5.1.0",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
     "lightningcss": "^1.24.1",
     "lightningcss-cli": "^1.24.1",
+    "markmap-lib": "^0.17.2",
+    "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "markmap-lib": "^0.17.2"
+    "rimraf": "^3.0.2"
   },
   "homepage": "https://github.com/pdehaan/11ty-mindmap#readme",
   "keywords": [
@@ -42,5 +42,8 @@
     "dev": "npm-run-all del:docs build:css --parallel watch serve:11ty",
     "build": "npm-run-all del:docs del:assets build:css build:site",
     "build:site": "npx cross-env ELEVENTY_ENV=prod npx eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-bundle": "^3.0.0"
   }
 }

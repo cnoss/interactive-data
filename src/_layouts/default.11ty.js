@@ -1,13 +1,11 @@
 
 const metaDataHeader = require('./components/meta-data-head.11ty');
 
-
-
-
 // eslint-disable-next-line func-names
 exports.render = function (data) {
   
   const metaDataHead = metaDataHeader.getHeader(data);
+
 
   return `<!doctype html> 
   <html lang="de">
