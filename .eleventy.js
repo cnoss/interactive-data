@@ -3,15 +3,16 @@ const del = require("del");
 
 const config = {
   "dist": "./docs",
-  "pathPrefix": "mindmaps",
+  "pathPrefix": {
+    "prod": "mindmapper",
+    "development": ""
+  },
 };
 
 
 
 
 module.exports = async function (eleventyConfig) {
-	const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   
   /* Compilation
   ########################################################################## */
