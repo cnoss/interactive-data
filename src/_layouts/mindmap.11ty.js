@@ -37,7 +37,7 @@ module.exports = function (data, eleventy) {
     <main>
       <h1 class="title">${data.title}</h1>
       ${subtitle}
-      <svg id="mindmap" style="width: 800px; height: 800px"></svg>
+      <svg id="mindmap" style="width: 1800px; height: 800px"></svg>
       ${script}
 
     </main>
