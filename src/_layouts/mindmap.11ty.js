@@ -22,7 +22,7 @@ module.exports = function (data, eleventy) {
     <style>
       #mindmap {
       --markmap-text-color: #fff;
-      --markmap-font: 300 15px/20px var(--font-family-sans);
+      --markmap-font: 300 14px/20px var(--font-family-sans);
       }
     </style>
   `;
