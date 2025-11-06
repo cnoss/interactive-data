@@ -1,58 +1,51 @@
-const defaultLayout = require("./default.11ty.js");
-const Transformer = require('markmap-lib').Transformer;
+const { Transformer } = require('markmap-lib');
 
+exports.data = function () {
+  return {
+    layout: 'default.11ty.js',
+  };
+};
 
-module.exports = function (data, eleventy) {
-
+// Use function (not arrow) to keep Eleventy context if needed
+exports.render = function (data) {
   const subtitle = data.subtitle ? `<h2 class="subtitle">${data.subtitle}</h2>` : '';
 
   const transformer = new Transformer();
-  const { root, features } = transformer.transform(data.content);
+  const { root } = transformer.transform(data.content);
 
   const script = `
     <script>
-      const { Markmap, loadCSS, loadJS } = markmap;
-      const options = undefined;
-      const svgEl = document.querySelector('#mindmap');
-      Markmap.create(svgEl, options, ${JSON.stringify(root)}).fit();
+      (async () => {
+        const { Markmap } = window.markmap;
+        const options = {
+          colorFreezeLevel: ${data.markmap?.colorFreezeLevel ?? 1},
+          nodeColor: ${data.markmap?.color ? `'${data.markmap.color}'` : 'null'},
+        };
+        const svgEl = document.querySelector('#mindmap');
+        const mm = await Markmap.create(svgEl, options, ${JSON.stringify(root)});        
+      })();
     </script>
   `;
 
   const style = `
     <style>
       #mindmap {
-      --markmap-text-color: #fff;
-      --markmap-font: 300 14px/20px var(--font-family-sans);
+        --markmap-text-color: #fff;
+        --markmap-font: 300 12px/15px var(--font-family-sans);
       }
+
+      .svg-canvas { width: 100%; height: 70vh; }
     </style>
   `;
 
-
-  const mindmapContent = `
-
+  return `
     ${style}
-    
-
-
     <main>
       <h1 class="title">${data.title}</h1>
       ${subtitle}
       <svg id="mindmap" class="svg-canvas"></svg>
       ${script}
-
     </main>
-
   `;
-
-  // Pass the article content to the base layout
-  //return defaultLayout({
-  //  ...data, // Spread in all data (like title, metadata)
-  //  content: articleContent, // Override content with the article's content
-  //});
-
-  return defaultLayout.render({
-    ...data,
-    content: mindmapContent,
-  });
 };
 

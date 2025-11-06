@@ -37,6 +37,15 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/assets/scripts': 'assets/scripts' });
   eleventyConfig.addWatchTarget("./src/assets/scripts");
 
+  /* Collections
+  ########################################################################## */
+  
+  eleventyConfig.addCollection("mindmap", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/mindmaps/**/*.md");
+  });
+
+
+
 
   const pathPrefix = config.pathPrefix[process.env.ELEVENTY_ENV];
 
